@@ -9,11 +9,18 @@
 }
 
 .drum {
-  border: 2px solid red;
   text-align: center;
-  background-color: azure;
 }
 
 .sound {
   width: 150px;
+}
+
+button {
+  border: 1px solid black;
+  margin-top: 15px;
+}
+
+.break {
+  height: 15px;
 }

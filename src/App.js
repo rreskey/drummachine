@@ -3,41 +3,56 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React, { useState } from 'react';
+import useSound from 'use-sound';
 function App() {
+  html5AudioProps.audioContext.resume().then(() => {
+    var audioContext = html5AudioProps.audioContext;
+  })
+  const soundUrl = '/notes/Heater-1.mp3';
+
+  const [playCev] = useSound(
+    soundUrl,
+    {volume: 0.25}
+  )
+  const handleClick = () => {
+    playCev()
+  }
   return (
-    <Container fluid='md' className='machine'>
+    <Container fluid='md' className='machine' >
       <Row>
         <Col className='drum'>
-          <p className='sound'>Q</p>
+          <button onClick={handleClick} type='button' className='sound'>Q</button>
         </Col>
         <Col className='drum'>
-          <p className='sound'>W</p>
+          <button type='button' className='sound'>W</button>
         </Col>
         <Col className='drum'>
-          <p className='sound'>E</p>
+          <button type='button' className='sound'>E</button>
         </Col>
       </Row>
+      <div className='break'/>
       <Row>
         <Col className='drum'>
-          <p className='sound'>A</p>
+          <button type='button' className='sound'>A</button>
         </Col>
         <Col className='drum'>
-          <p className='sound'>S</p>
+          <button type='button' className='sound'>S</button>
         </Col>
         <Col className='drum'>
-          <p className='sound'>D</p>
+          <button type='button' className='sound'>D</button>
         </Col>
       </Row>
+      <div className='break'/>
       <Row>
         <Col className='drum'>
-          <p className='sound'>Z</p>
+          <button type='button' className='sound'>Z</button>
         </Col>
         <Col className='drum'>
-          <p className='sound'>X</p>
+          <button type='button' className='sound'>X</button>
         </Col>
         <Col className='drum'>
-          <p className='sound'>C</p>
+          <button type='button' className='sound'>C</button>
         </Col>
       </Row>
     </Container>
