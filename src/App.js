@@ -6,9 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import useSound from 'use-sound';
 function App() {
-  html5AudioProps.audioContext.resume().then(() => {
-    var audioContext = html5AudioProps.audioContext;
-  })
   const soundUrl = '/notes/Heater-1.mp3';
 
   const [playCev] = useSound(
