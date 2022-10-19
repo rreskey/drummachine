@@ -1,26 +1,31 @@
-.machine {
-  background-color: teal;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.pad {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  border: 1px solid black;
+  margin-top: 15px;
+  background-color: wheat;
+}
+
+.pad p {
   font-size: 5rem;
 }
 
-.drum {
-  text-align: center;
-}
-
 .sound {
-  width: 150px;
+  display: block;
+  margin: 0 auto;
 }
 
-button {
-  border: 1px solid black;
-  margin-top: 15px;
+.misc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
 }
 
-.break {
-  height: 15px;
+h3 {
+  margin: 0 auto;
+  width: max-content;
+  padding: 1rem;
+  background-color: crimson;
 }
